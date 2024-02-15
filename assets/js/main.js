@@ -13,7 +13,7 @@ const introswiper = new Swiper('.slide-intro', {
       prevEl: '.swiper-button-prev',
     },
     autoplay: {
-      delay: 3000,
+      delay: 5000,
       disableOnInteraction: false,
     },
   
