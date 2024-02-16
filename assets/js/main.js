@@ -55,12 +55,13 @@ document.addEventListener('DOMContentLoaded', function() {
 $(document).ready(function(){
   // .slick-slide 클래스를 가진 요소들에 대한 슬라이더 초기화
   $('.slide-notice').slick({
-      slidesToShow: 4,
+      slidesToShow: 3,
       slidesToScroll: 1,
-      autoplay: true,
+      // autoplay: true,
       autoplaySpeed: 3000,
   });
 });
+
 
 //sec4
 

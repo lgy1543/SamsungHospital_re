@@ -165,7 +165,7 @@
   transition: opacity 3s ease-out, transform 2s ease-out;
 }
 
-//반응형 미디쿼리-bigtablet(max-width1280:뷰포트1280px이하일 때)
+//반응형 미디쿼리-pc(max-width1280:뷰포트1280px이하일 때)
 
 @media screen and (max-width: $breakpoint-xl) {
   .slide-intro {
@@ -197,7 +197,7 @@
     }
   }
 }
-//반응형 미디쿼리-smalltablet(max-width992px:뷰포트992px이하일 때)
+//반응형 미디쿼리-bigtablet(max-width992px:뷰포트992px이하일 때)
 @media screen and (max-width: $breakpoint-lg) {
   .servicebox_wrapper {
     width: 95%;
@@ -210,6 +210,11 @@
     }
   }
 }
+
+//반응형 미디쿼리-smalltablet(max-width768px:뷰포트768px이하일 때)
+@media screen and (max-width: $breakpoint-md) {
+}
+
 //section3(공지글)
 .sec3 {
   background: $primary;
@@ -241,8 +246,8 @@
     margin-left: 3px;
   }
 }
-h2 {
-  @include Bold-48;
+.h2 {
+  font-size: 48px;
 }
 
 .notice-wrapper {
@@ -271,16 +276,17 @@ h2 {
     align-items: center;
   }
   .notice-text {
-    width: 328px;
+    width: 25%;
     height: 260px;
     color: $white;
     margin-top: 77px;
   }
   .slide-notice {
     margin-top: 77px;
-    position: absolute;
-    left: calc(50% - 312px);
-    right: 0;
+    // position: absolute;
+    // left: calc(50% - 312px);
+    width: 75%;
+    // right: 0;
     .slick-prev {
       left: -315px;
       transform: translateY(283%);
@@ -307,6 +313,39 @@ h2 {
   width: 200px;
   height: 220px;
   margin-right: 15px;
+}
+
+//반응형 미디어쿼리-pc(max-width:$breakpoint-xl)
+@media screen and (max-width: $breakpoint-xl) {
+  .notice-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 390px;
+    margin: 0 15px 0 15px;
+    .slick-slide a:nth-child(2) {
+      @include SemiBold-18;
+    }
+    .slick-slide a:nth-child(3) {
+      @include Regular-16;
+    }
+    .slide-notice {
+      width: 100%;
+      margin-top: 20px;
+    }
+    .notice-text {
+      margin-top: 5px;
+      height: 72px;
+    }
+    .notice-text-1 {
+      display: none;
+    }
+  }
+  .notice-wrapper .slide-notice .slick-prev {
+    top: -55px;
+  }
+  .notice-wrapper .slide-notice .slick-next {
+    left: -171px;
+  }
 }
 
 //section4(주요서비스)
@@ -373,6 +412,26 @@ h2 {
     }
   }
 }
+//반응형 미디어쿼리-tablet(max-width:$breakpoint-lg)
+@media screen and (max-width: $breakpoint-lg) {
+  // .sec4 {
+  //   max-width: 992px;
+  // }
+  .goto-wrapper ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .goto-wrapper ul li {
+    margin-bottom: 36px;
+  }
+  .goto-wrapper ul li a {
+    text-align: center;
+  }
+}
 
 //section5(건강tv)
 .sec5-bg {
@@ -386,7 +445,7 @@ h2 {
     margin-top: 12px;
   }
 }
-.sec5 {
+.sec5-bg {
   margin: auto;
   background: $gray_F8;
   padding-top: 40px;
@@ -468,7 +527,7 @@ h2 {
     }
   }
 }
-
+//반응형 미디어쿼리
 //section(last section,오시는길)
 .sec6 {
   max-width: 1280px;
