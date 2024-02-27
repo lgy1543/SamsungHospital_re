@@ -5,7 +5,7 @@
   position: relative;
 }
 .slide-intro {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
 
   img {
@@ -210,9 +210,93 @@
     }
   }
 }
-
-//반응형 미디쿼리-smalltablet(max-width768px:뷰포트768px이하일 때)
+//반응형 미디어쿼리-smalltablet(max-width768px:뷰포트768px이하일 때)
 @media screen and (max-width: $breakpoint-md) {
+  .servicebox_wrapper {
+    transform: translate(-50%, -104%);
+    .servicebox {
+      height: 190px;
+      width: 80%;
+      margin-right: 0;
+      margin-top: 24px;
+    }
+    .servicebox a {
+      padding: 9.5px 52px;
+    }
+    .service-text {
+      margin-bottom: 17px;
+      transform: translateX(-66px);
+    }
+
+    .servicebox .servicebox2-botton > a {
+      padding: 9.5px 32px;
+    }
+    .servicebox .box3-button {
+      padding: 9.5px 131px;
+    }
+    .servicebox4.show .inputbox {
+      display: none;
+    }
+    .servicebox .loginbox2 {
+      display: none;
+    }
+    .servicebox4.show button {
+      display: none;
+    }
+    .servicebox .loginbox1 {
+      display: flex;
+      flex-direction: column;
+    }
+    .servicebox .loginbox1 a {
+      border: 1px solid $primary;
+      padding: 10px 32px 10px 32px;
+      margin-bottom: 10px;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+//반응형 미디어쿼리-mov(max-width:576px)
+@media screen and (max-width: $breakpoint-sm) {
+  .servicebox_wrapper {
+    transform: translate(-50%, -111%);
+    .servicebox {
+      height: 130px;
+      margin-top: 12px;
+    }
+    .servicebox a {
+      padding: 8.5px 36px;
+    }
+    .servicebox .loginbox1 a {
+      margin-bottom: 2px;
+      padding: 10px 54px 10px 54px;
+    }
+    span {
+      @include Bold-18;
+    }
+    .txt-2 {
+      @include Regular-13;
+    }
+    a {
+      @include Regular-13;
+    }
+    .servicebox4.show .loginbox1 .member-text {
+      @include Regular-16;
+    }
+    .servicebox4.show .loginbox1 .non-member-text {
+      @include Regular-16;
+    }
+    .servicebox .servicebox2-botton > a {
+      padding: 8.5px 20px;
+    }
+    .service-text {
+      transform: translateX(-39px);
+      margin-bottom: 6px;
+    }
+    .servicebox .box3-button {
+      padding: 9.5px 95px;
+    }
+  }
 }
 
 //section3(공지글)
@@ -315,7 +399,7 @@
   margin-right: 15px;
 }
 
-//반응형 미디어쿼리-pc(max-width:$breakpoint-xl)
+//반응형 미디어쿼리-pc(max-width:1280px)
 @media screen and (max-width: $breakpoint-xl) {
   .notice-wrapper {
     display: flex;
@@ -347,7 +431,50 @@
     left: -171px;
   }
 }
-
+//반응형 미디어쿼리-tab(max-width:768px)
+@media screen and (max-width: $breakpoint-md) {
+  .notice-wrapper {
+    .slick-slide a:nth-child(2) {
+      @include SemiBold-16;
+    }
+    .slick-slide a:nth-child(3) {
+      @include Regular-13;
+      margin-top: 10px;
+    }
+    .notice {
+      width: 58px;
+      height: 33px;
+    }
+    .slick-slide {
+      height: 192px;
+      margin-right: 7px;
+    }
+    .slick-slide a {
+      padding: 0px 10px 0px 10px;
+    }
+    .number {
+      margin-bottom: 17px;
+    }
+    .h2 {
+      @include SemiBold-26;
+    }
+    .notice-text {
+      margin-top: 29px;
+    }
+  }
+}
+//반응형 미디어쿼리-mob(max-width:576px)
+@media screen and (max-width: $breakpoint-sm) {
+  .notice-wrapper {
+    margin: 0 15px 0 19px;
+    .slick-slide a:nth-child(3) {
+      display: none;
+    }
+    .slick-slide {
+      height: 157px;
+    }
+  }
+}
 //section4(주요서비스)
 .sec4-h2 {
   @include Bold-48;
@@ -432,10 +559,32 @@
     text-align: center;
   }
 }
+//반응형 미디어쿼리-mob(max-width:$breakpoint-sm)
+@media screen and (max-width: $breakpoint-sm) {
+  .sec4 {
+    padding: 0;
+    .goto-wrapper ul li a {
+      width: 131px;
+      height: 131px;
+      @include Bold-13;
+    }
+    .goto-wrapper ul .doc {
+      width: 70px;
+    }
+    .goto-wrapper ul img {
+      margin-bottom: 5px;
+    }
+  }
+  .sec4-h2 {
+    @include SemiBold-26;
+    margin-bottom: 80px;
+  }
+}
 
 //section5(건강tv)
 .sec5-bg {
   background: $gray_F8;
+  padding: 0;
 }
 .healthstory-txt {
   text-align: center;
@@ -527,7 +676,91 @@
     }
   }
 }
-//반응형 미디어쿼리
+//반응형 미디어쿼리-pc(max-width1280:뷰포트1280px이하일 때)
+@media screen and (max-width: $breakpoint-xl) {
+  .sec5-bg .slide-tv img {
+    width: 445px;
+  }
+  .sec5-bg .healthinfo-slide .slide-info img {
+    width: 445px;
+  }
+  .sec5-bg .healthinfo-slide {
+    padding-top: 0;
+  }
+}
+//반응형 미디어쿼리-tab(max-width:992px)
+@media screen and (max-width: $breakpoint-lg) {
+  .sec5-bg .slide-tv img {
+    width: 365px;
+  }
+  .sec5-bg .slide-tv p {
+    @include SemiBold-20;
+  }
+  .sec5-bg .healthinfo-slide .slide-info img {
+    width: 365px;
+  }
+  .sec5-bg .healthinfo-slide .slide-info p {
+    @include SemiBold-20;
+  }
+  .sec5-bg .healthinfo-slide {
+    padding-top: 0;
+  }
+  //건강티비
+  .sec5-bg .slide-tv .swiper-button-next {
+    transform: translate(40%, -315%);
+  }
+  .sec5-bg .slide-tv .swiper-button-prev {
+    transform: translate(-40%, -315%);
+  }
+  //건강정보
+  .sec5-bg .healthinfo-slide .slide-info .swiper-button-next {
+    transform: translate(40%, -315%);
+  }
+  .sec5-bg .healthinfo-slide .slide-info .swiper-button-prev {
+    transform: translate(-40%, -315%);
+  }
+}
+//반응형 미디어쿼리-tab(max-width:768px)
+@media screen and (max-width: $breakpoint-md) {
+  .sec5-bg {
+    .slide-tv img {
+      width: 60%;
+    }
+    .slide-tv p {
+      @include Regular-16;
+    }
+    h3 {
+      @include SemiBold-22;
+    }
+    .healthinfo-slide .slide-info img {
+      width: 60%;
+      height: auto;
+    }
+    .healthinfo-slide .slide-info p {
+      @include Regular-16;
+    }
+    .slide-tv {
+      height: 310px;
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+      display: none;
+    }
+    .healthinfo-slide .slide-info {
+      height: 270px;
+    }
+  }
+  .healthstory-txt {
+    padding: 0;
+    p {
+      @include Regular-13;
+    }
+  }
+  .sec5-bg h2 {
+    @include SemiBold-26;
+  }
+}
+
 //section(last section,오시는길)
 .sec6 {
   max-width: 1280px;
@@ -611,6 +844,38 @@
       background: green;
       border: 1px solid $white;
       color: $white;
+    }
+  }
+}
+//반응형 미디쿼리-pc(max-width1280:뷰포트992px이하일 때)
+@media screen and (max-width: $breakpoint-lg) {
+  .sec6 #map {
+    height: 500px;
+  }
+}
+//반응형 미디어쿼리-tab(max-width:768px)
+@media screen and (max-width: $breakpoint-md) {
+  .sec6 {
+    #map {
+      width: 70%;
+    }
+    ul li a {
+      @include Regular-13;
+    }
+    ul li img {
+      margin-bottom: 13px;
+    }
+    h2 {
+      @include SemiBold-26;
+    }
+    .mapbox-txt {
+      @include Regular-13;
+    }
+    .map-text {
+      @include Regular-13;
+    }
+    .map-info a {
+      @include Regular-13;
     }
   }
 }

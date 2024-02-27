@@ -59,8 +59,17 @@ $(document).ready(function(){
       slidesToScroll: 1,
       // autoplay: true,
       autoplaySpeed: 3000,
+      responsive:[
+        {
+          breakpoint:576,
+          settings:{
+            slidesToShow:2
+            
+          }
+        }, ]  
   });
 });
+
 
 
 //sec4
@@ -78,6 +87,14 @@ $(document).ready(function(){
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
+    breakpoints: {
+      768:{
+        slidesPerView:2,
+      },
+      100: {
+        slidesPerView:1,
+      }
+    },
   
   });
   const infoswiper = new Swiper('.slide-info', {
@@ -88,6 +105,14 @@ $(document).ready(function(){
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
+    breakpoints: {
+      768:{
+        slidesPerView:2,
+      },
+      100: {
+        slidesPerView:1,
+      }
+    }
   
   });
 
@@ -105,6 +130,8 @@ $(document).ready(function(){
                 title: '삼성서울병원'
             });
         }
+   
+       
 
 
 
